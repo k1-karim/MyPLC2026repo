@@ -6,7 +6,7 @@ public class ErrorsBool
     enum Error { FP_ROUNDING, FP_OVERFLOW, FP_UNDERFLOW, INT_OVERFLOW }
 
     enum Result { A_BIT_DIFFERENT, INFINITY, ZERO, VERY_DIFFERENT }
-    
+
     private static <E extends Enum<E>> E getEnumElement(String elementTypeName, Class<E> elementType)
     {
         boolean haveResult = false;
@@ -39,7 +39,7 @@ public class ErrorsBool
             (e == Error.FP_OVERFLOW ? Result.INFINITY :
                 (e == Error.FP_UNDERFLOW ? Result.ZERO :
                     (e == Error.FP_ROUNDING ? Result.A_BIT_DIFFERENT : 
-                        true ? Result.VERY_DIFFERENT
+                         Result.VERY_DIFFERENT
                     )
                 )
             );
